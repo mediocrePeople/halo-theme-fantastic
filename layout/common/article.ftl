@@ -96,7 +96,7 @@
         </div>
     </div>
 
-    <#if !index??>
+    <#if !index >
         <#if (settings.donate_alipay?? && settings.donate_alipay!='') || (settings.donate_wechat?? && settings.donate_wechat!='')>
             <div class="card">
                 <div class="card-content">

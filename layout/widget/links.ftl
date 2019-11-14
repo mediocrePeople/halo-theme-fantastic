@@ -9,13 +9,10 @@
                 <ul class="menu-list">
                     <#list links as link>
                         <li>
-                            <a class="level is-mobile" href="${link.url!}" target="_blank">
-                                <span class="level-left">
-                                    <span class="level-item">${link.name}</span>
-                                </span>
-                                <span class="level-right">
-                                    <span class="level-item tag">${link.url!}</span>
-                                </span>
+                            <a class="level is-mobile" href="${link.url!}" target="_blank" title="${link.url!}">
+                                <span class="level-left level-item" style='font-weight:bold;color:blue'><i><u>${link.name}</i></u></span>
+                                <span class="level-right level-item tag">${link.description!}</span>
+                                <!-- <span class="level-right level-item tag">${link.url!}</span> -->
                             </a>
                         </li>
                     </#list>

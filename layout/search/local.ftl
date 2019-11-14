@@ -7,7 +7,7 @@
             <span class="searchbox-close ins-close ins-selectable" onclick="closeSearchPanel()"><i class="fas fa-times"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
-            <div class="ins-section-container">
+            <div class="ins-section-container" style="overflow:hidden;">
                 <#--                <section class="ins-section">-->
                 <#--                    <header class="ins-section-header">最新文章</header>-->
                 <#--                    <@postTag method="latest" top="5">-->

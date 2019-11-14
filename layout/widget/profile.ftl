@@ -2,31 +2,29 @@
     <div class="card-content">
         <nav class="level">
             <div class="level-item has-text-centered" style="flex-shrink: 1">
-                <div class="level">
-                    <figure class="image is-64x64 has-mb-6 level-left">
-                        <img class="is-rounded"
-                             src="${user.avatar!}" alt="${user.nickname!}" style="padding: 2px;
-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
-                    </figure>
-                    <#if settings.profile_enable!true>
-                        <div class="level-right">
-                            <div>
-                                <p class="title is-3">
-                                    ${user.nickname!}
-                                </p>
-                                <p class="is-size-5 is-block" style="padding-left: 1em;">
-                                    ${user.description!}
-                                </p>
-                            </div>
+                <#if settings.profile_enable!true>
+                    <div class="level-right">
+                        <div class="has-text-centered">
+														<figure class="image is-64x64 has-mb-6 level" style="left:39%;" >
+										            <img class="is-rounded"
+										                 src="${user.avatar!}" alt="${user.nickname!}" style="padding: 2px;
+				box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
+										        </figure>
+                            <p class="title is-3" >
+                                ${user.nickname!}
+                            </p>
+                            <p class="is-size-5 is-block" style="padding-left: 1em;width:220px;">
+                                ${user.description!}
+                            </p>
                         </div>
-                    </#if>
-                    <#--                    <#if settings.profile_location?? && settings.profile_location!=''>-->
-                    <#--                        <p class="is-size-6 is-flex is-flex-center has-text-grey">-->
-                    <#--                            <i class="fas fa-map-marker-alt has-mr-7"></i>-->
-                    <#--                            <span>${settings.profile_location!}</span>-->
-                    <#--                        </p>-->
-                    <#--                    </#if>-->
-                </div>
+                    </div>
+                </#if>
+                <#--                    <#if settings.profile_location?? && settings.profile_location!=''>-->
+                <#--                        <p class="is-size-6 is-flex is-flex-center has-text-grey">-->
+                <#--                            <i class="fas fa-map-marker-alt has-mr-7"></i>-->
+                <#--                            <span>${settings.profile_location!}</span>-->
+                <#--                        </p>-->
+                <#--                    </#if>-->
             </div>
         </nav>
         <nav class="level is-mobile">
