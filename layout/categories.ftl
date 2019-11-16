@@ -10,7 +10,10 @@
                         <li>
                             <a class="level is-marginless" href="${context!}/categories/${category.slugName!}">
                                 <span class="level-start">
-                                    <span class="level-item">${category.name}</span>
+                                    <span class="level-item">${category.slugName}</span>
+                                </span>
+																<span class="level-start">
+                                    <span class="level-item">${category.description}</span>
                                 </span>
                                 <span class="level-end">
                                     <span class="level-item tag">${category.postCount}</span>

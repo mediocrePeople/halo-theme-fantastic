@@ -51,7 +51,7 @@
                             <div class="card-image">
                                 <figure class="image">
                                     <a href="${photo.url}" class="show" >
-                                        <img src="${photo.thumbnail}" alt="" >
+                                        <img src="${photo.thumbnail}" alt="${photo.name}" title="${photo.name}" >
                                     </a>
                                 </figure>
 <#--                                <div class="card-content is-overlay is-clipped">-->
@@ -73,8 +73,8 @@
 
     </@photoTag>
 </section>
-<#include "./layout/common/footer.ftl">
-<#include "./layout/plugin/back-to-top.ftl">
+<#include "layout/common/footer.ftl">
+<#include "layout/plugin/back-to-top.ftl">
 
 </body>
 <script src="${static!}/source/lib/lg/js/lightgallery.min.js"></script>
