@@ -9,13 +9,10 @@
                     <#list categories as category>
                         <li>
                             <a class="level is-marginless" href="${context!}/categories/${category.slugName!}">
-                                <span class="level-start" style="width:20%;">
+                                <span class="level-start">
                                     <span class="level-item">${category.slugName}</span>
                                 </span>
-																<span class="level-end" style="width:70%;">
-                                    <span class="level-item">${category.description}</span>
-                                </span>
-                                <span class="level-end" style="width:10%;">
+                                <span class="level-end">
                                     <span class="level-item tag">${category.postCount}</span>
                                 </span>
                             </a>

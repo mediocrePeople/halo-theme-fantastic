@@ -1,1 +1,1 @@
-<#include "../categories.ftl">
+<#include "../categories_brief.ftl">
