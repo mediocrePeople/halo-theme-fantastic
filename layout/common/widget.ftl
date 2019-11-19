@@ -22,17 +22,18 @@
             </#if>
             <#if position == 'right'>
                 <#if post??>
-                    <#include "../widget/cate_posts.ftl">
+                    <#-- <#include "../widget/cate_posts.ftl"> -->
                     <#include "../widget/tag_posts.ftl">
                     <#include "../widget/toc-post.ftl">
                 <#else>
                     <#if settings.sidebar_recentpost!true>
                         <#include "../widget/recent_posts.ftl">
                     </#if>
+										<#if settings.sidebar_recentcomment!true>
+		                    <#include "../widget/recent_comments.ftl" >
+		                </#if>
                 </#if>
-                <#if settings.sidebar_recentcomment!true>
-                    <#include "../widget/recent_comments.ftl">
-                </#if>
+                
             <#--        <#include "../widget/archive.ftl">-->
 <#--                <#if settings.sidebar_tags!true>-->
 <#--                    <#include "../widget/tag.ftl">-->

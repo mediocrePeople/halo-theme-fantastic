@@ -1,7 +1,7 @@
 <#macro article post,layout,commentType,index>
     <#include "../comment/comment.ftl">
 <#--    <div class="card" <#if is_post??><#else>style="margin-left: 10px;"</#if>>-->
-    <div class="card" <#if is_post??>style="display: block"</#if> >
+    <div class="card" <#if is_post??>style="display: block;"</#if> >
         <#if is_post?? || is_page?? || is_sheet??>
         <#else >
             <#if post.thumbnail?? && post.thumbnail!=''>
@@ -22,7 +22,7 @@
             <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
                 <div class="level-left">
                     <time class="level-item has-text-grey"
-                          datetime="${post.createTime!}">${post.createTime?string["EEE MMM d"]}</time>
+                          datetime="${post.createTime!}">${post.createTime?string["yyyy MMM d"]}</time>
                     <#if index>
                         <#if post.categories?? && post.categories?size gt 0>
                             <div class="level-item">
@@ -117,24 +117,31 @@
     <#if !index && nextPost?? && prePost??>
         <div class="card card-transparent">
             <div class="level post-navigation is-flex-wrap is-mobile">
-                <#if prePost??>
-                    <div class="level-start">
-                        <a class="level level-item has-link-grey article-nav-prev"
-                           href="${context!}/archives/${prePost.url}">
-                            <i class="level-item fas fa-chevron-left"></i>
-                            <span class="level-item">${prePost.title!}</span>
-                        </a>
-                    </div>
-                </#if>
+                
                 <#if nextPost??>
                     <div class="level-end">
                         <a class="level level-item has-link-grey article-nav-next"
                            href="${context!}/archives/${nextPost.url}">
+
+                            <i class="level-item fas fa-chevron-left"></i>
+
                             <span class="level-item">${nextPost.title!}</span>
-                            <i class="level-item fas fa-chevron-right"></i>
+                            
                         </a>
                     </div>
                 </#if>
+								<#if prePost??>
+                    <div class="level-start">
+                        <a class="level level-item has-link-grey article-nav-prev"
+                           href="${context!}/archives/${prePost.url}">
+
+                            <span class="level-item">${prePost.title!}</span>
+
+														<i class="level-item fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </#if>
+
             </div>
         </div>
     </#if>
