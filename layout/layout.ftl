@@ -98,7 +98,7 @@
                             <div class="column is-12-tablet is-8-desktop is-11-widescreen is-8-fullhd has-order-2 column-main">
                                 <#nested />
                             </div>
-                            <#-- <@widget 'right' /> -->
+                            <#--<@widget 'right' />-->
                         <#elseif is_sheet??>
                             <div class="column is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd has-order-2 column-main">
                                 <#nested />
