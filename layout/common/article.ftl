@@ -2,6 +2,19 @@
     <#include "../comment/comment.ftl">
 <#--    <div class="card" <#if is_post??><#else>style="margin-left: 10px;"</#if>>-->
     <div class="card" <#if is_post??>style="display: block;"</#if> >
+        <#--${post}<br/>  PostDetailVO对象
+        ${layout}<br/>  page
+        ${commentType}<br/>  post
+        ${index}<br/>  布尔类型 false
+        ${is_post}<br/>  布尔类型 true
+        ${is_page}<br/>  null
+        ${is_sheet}<br/>   null
+        测试方式：
+        ${index?string("index true","index false")}
+        ${is_post?string("is_post true","is_post false")}
+
+         -->
+
         <#if is_post?? || is_page?? || is_sheet??>
         <#else >
             <#if post.thumbnail?? && post.thumbnail!=''>
