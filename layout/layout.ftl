@@ -95,7 +95,7 @@
                             <#if settings.share_type !=''>
                                 <@module 'share' />
                             </#if>
-                            <div class="column is-12-tablet is-8-desktop is-8-widescreen is-8-fullhd has-order-2 column-main">
+                            <div class="column is-12-tablet is-8-desktop is-11-widescreen is-8-fullhd has-order-2 column-main">
                                 <#nested />
                             </div>
                             <#--<@widget 'right' />-->
