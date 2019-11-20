@@ -119,7 +119,7 @@
                                         </#list>
                                         <#if isTop??>
                                             <div class="level">
-                                                <#--                                        <#include "./common/widget_pin.ftl">-->
+                                                <#-- <#include "./common/widget_pin.ftl"> -->
                                                 <@module 'slider' />
                                             </div>
                                         </#if>

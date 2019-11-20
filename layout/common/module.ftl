@@ -27,9 +27,9 @@
                             </div>
                             <div class="blog-slider__content">
                                 <span class="blog-slider__code">${post.createTime?string["EEE MMM d"]}</span>
-                                <div class="blog-slider__title "><a class="title is-5" href="${context!}/archives/${post.url!}">${post.title!}</a></div>
+                                <div class="blog-slider__title "><a class="title is-5" href="${context!}/archives/${post.url!}" target="_blank">${post.title!}</a></div>
                                 <div class="blog-slider__text" content="">${post.summary!}</div>
-                                <a href="${context!}/archives/${post.url!}" class="blog-slider__button">阅读更多</a>
+                                <a href="${context!}/archives/${post.url!}" class="blog-slider__button" target="_blank">阅读更多</a>
                             </div>
                         </div>
                     </#if>

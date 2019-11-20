@@ -7,7 +7,7 @@
             <#if post.thumbnail?? && post.thumbnail!=''>
                 <div class="card-image">
                     <#if index>
-                        <a href="${context!}/archives/${post.url!}">
+                        <a href="${context!}/archives/${post.url!}" target="_blank">
                             <img class="thumbnail" src="${post.thumbnail!}" alt="${post.title!}">
                         </a>
                     <#else>
@@ -55,7 +55,7 @@
             <#else>
                 <h1 class="title is-size-5 is-size-5-mobile has-text-weight-normal">
                     <#if index>
-                        <a class="has-link-black-ter" href="${context!}/archives/${post.url!}">${post.title!}</a>
+                        <a class="has-link-black-ter" href="${context!}/archives/${post.url!}" target="_blank">${post.title!}</a>
                     <#else>
                         ${post.title!}
                     </#if>
@@ -87,7 +87,7 @@
                 <div class="level is-mobile">
                     <div class="level-start">
                         <div class="level-item">
-                            <a class="button is-size-7 is-light" href="${context!}/archives/${post.url!}#more">阅读更多</a>
+                            <a class="button is-size-7 is-light" href="${context!}/archives/${post.url!}#more" target="_blank">阅读更多</a>
                         </div>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
 
                             <span class="level-item">${prePost.title!}</span>
 
-														<i class="level-item fas fa-chevron-right"></i>
+							<i class="level-item fas fa-chevron-right"></i>
                         </a>
                     </div>
                 </#if>
