@@ -29,11 +29,10 @@
                     <#if settings.sidebar_recentpost!true>
                         <#include "../widget/recent_posts.ftl">
                     </#if>
-										<#if settings.sidebar_recentcomment!true>
-		                    <#include "../widget/recent_comments.ftl" >
-		                </#if>
+                    <#if settings.sidebar_recentcomment!true>
+                        <#include "../widget/recent_comments.ftl" >
+                    </#if>
                 </#if>
-                
             <#--        <#include "../widget/archive.ftl">-->
 <#--                <#if settings.sidebar_tags!true>-->
 <#--                    <#include "../widget/tag.ftl">-->
