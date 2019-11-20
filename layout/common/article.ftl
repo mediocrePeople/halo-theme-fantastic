@@ -23,12 +23,14 @@
                 <div class="level-left">
                     <time class="level-item has-text-grey"
                           datetime="${post.createTime!}">${post.createTime?string["yyyy MMM d"]}</time>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <#if index>
                         <#if post.categories?? && post.categories?size gt 0>
                             <div class="level-item">
                                 <#list post.categories as category>
                                     <a class="has-link-grey -link"
-                                       href="${context!}/categories/${category.slugName!}">${category.name!}</a>&nbsp;
+                                       href="${context!}/categories/${category.slugName!}">${category.name!}</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 </#list>
                             </div>
                         </#if>
@@ -37,7 +39,8 @@
                             <div class="level-item">
                                 <#list categories as category>
                                     <a class="has-link-grey -link"
-                                       href="${context!}/categories/${category.slugName!}">${category.name!}</a>&nbsp;
+                                       href="${context!}/categories/${category.slugName!}">${category.name!}</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 </#list>
                             </div>
                         </#if>
