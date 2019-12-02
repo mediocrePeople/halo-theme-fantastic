@@ -95,10 +95,11 @@
                             <#if settings.share_type !=''>
                                 <@module 'share' />
                             </#if>
-                            <div class="column is-12-tablet is-8-desktop is-11-widescreen is-8-fullhd has-order-2 column-main">
+                            <div class="column is-12-tablet is-8-desktop is-11-widescreen is-8-fullhd has-order-2 column-main" style="width:90%;">
                                 <#nested />
                             </div>
                             <#--<@widget 'right' />-->
+							
                         <#elseif is_sheet??>
                             <div class="column is-12-tablet is-12-desktop is-12-widescreen is-12-fullhd has-order-2 column-main">
                                 <#nested />
