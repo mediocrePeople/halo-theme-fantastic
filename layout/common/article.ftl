@@ -130,10 +130,9 @@
         </#if>
     </#if>
 
-    <#if !index && nextPost?? && prePost??>
+    <#if !index && (nextPost?? || prePost??)>
         <div class="card card-transparent">
             <div class="level post-navigation is-flex-wrap is-mobile">
-                
                 <#if nextPost??>
                     <div class="level-end">
                         <a class="level level-item has-link-grey article-nav-next"
@@ -144,6 +143,9 @@
                             <span class="level-item">${nextPost.title!}</span>
                             
                         </a>
+                    </div>
+		<#else>
+		    <div class="level-end">
                     </div>
                 </#if>
 								<#if prePost??>
@@ -156,8 +158,10 @@
 							<i class="level-item fas fa-chevron-right"></i>
                         </a>
                     </div>
+                <#else>
+                    <div class="level-start">
+                    </div>
                 </#if>
-
             </div>
         </div>
     </#if>
