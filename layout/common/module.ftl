@@ -18,20 +18,42 @@
             <div class="blog-slider__wrp swiper-wrapper">
                 <#list posts.content as post>
                     <#if post.topPriority == 1>
-                        <div class="blog-slider__item swiper-slide">
-                            <div class="blog-slider__img">
-                                <a href="${context!}/archives/${post.url!}">
-                                    <img src="${post.thumbnail!}"
-                                         alt="${post.title!}">
-                                </a>
+                        <#-- 如果该文章存在缩略图，再显示缩略图 -->
+                        <#if (post.thumbnail)?? && (post.thumbnail) != ''>
+                            <div class="blog-slider__item swiper-slide">
+                                <#-- 如该文章没有缩略图，则显示默认缩略图 -->
+                                <#if (post.thumbnail)?? && (post.thumbnail) != ''>
+                                    <div class="blog-slider__img">
+                                        <a href="${context!}/archives/${post.url!}">
+                                            <img src="${post.thumbnail}"
+                                                 alt="${post.title!}">
+                                        </a>
+                                    </div>
+                                <#else>
+                                    <div class="blog-slider__img">
+                                        <a href="${context!}/archives/${post.url!}">
+                                            <img src="https://mediocrepeople.tpddns.cn/upload/2019/11/4ff34a967f6161b15b92328b3d9a1565f06895e326ee8-38WoIo_fw658.webp-3021da8cd33641c9a3a9b63537a16d1b.jpg"
+                                                 alt="${post.title!}">
+                                        </a>
+                                    </div>
+                                </#if>
+                                <div class="blog-slider__content">
+                                    <span class="blog-slider__code">${post.createTime?string["EEE MMM d"]}</span>
+                                    <div class="blog-slider__title "><a class="title is-5" href="${context!}/archives/${post.url!}" target="_blank">${post.title!}</a></div>
+                                    <div class="blog-slider__text" content="">${post.summary!}</div>
+                                    <a href="${context!}/archives/${post.url!}" class="blog-slider__button" target="_blank">阅读更多</a>
+                                </div>
                             </div>
-                            <div class="blog-slider__content">
-                                <span class="blog-slider__code">${post.createTime?string["EEE MMM d"]}</span>
-                                <div class="blog-slider__title "><a class="title is-5" href="${context!}/archives/${post.url!}" target="_blank">${post.title!}</a></div>
-                                <div class="blog-slider__text" content="">${post.summary!}</div>
-                                <a href="${context!}/archives/${post.url!}" class="blog-slider__button" target="_blank">阅读更多</a>
+                        <#else>
+                            <div class="blog-slider__item swiper-slide">
+                                <div class="blog-slider__content">
+                                    <span class="blog-slider__code">${post.createTime?string["EEE MMM d"]}</span>
+                                    <div class="blog-slider__title "><a class="title is-5" href="${context!}/archives/${post.url!}" target="_blank">${post.title!}</a></div>
+                                    <div class="blog-slider__text" content="">${post.summary!}</div>
+                                    <a href="${context!}/archives/${post.url!}" class="blog-slider__button" target="_blank">阅读更多</a>
+                                </div>
                             </div>
-                        </div>
+                        </#if>
                     </#if>
                 </#list>
             </div>
