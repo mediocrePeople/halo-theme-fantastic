@@ -32,7 +32,7 @@
                                 <#else>
                                     <div class="blog-slider__img">
                                         <a href="${context!}/archives/${post.url!}">
-                                            <img src="https://mediocrepeople.tpddns.cn/upload/2019/11/4ff34a967f6161b15b92328b3d9a1565f06895e326ee8-38WoIo_fw658.webp-3021da8cd33641c9a3a9b63537a16d1b.jpg"
+                                            <img src="http://mediocrepeople.tpddns.cn:9999/upload/2019/11/4ff34a967f6161b15b92328b3d9a1565f06895e326ee8-38WoIo_fw658.webp-3021da8cd33641c9a3a9b63537a16d1b.jpg"
                                                  alt="${post.title!}">
                                         </a>
                                     </div>

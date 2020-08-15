@@ -24,10 +24,10 @@ pre[class*="language-"] {
 	background: none;
 	font-weight: 400;
 	text-align: left;
-	white-space: pre;
+	white-space: pre-wrap;
 	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
+	word-break: break-all;
+	word-wrap: break-word;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
