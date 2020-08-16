@@ -83,6 +83,8 @@
             <link rel="stylesheet" href="${static!}/source/css/widget_pin.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
         </#if>
+        <link rel="stylesheet" href="${static!}/source/lib/prism/css/code-wrap.css">
+        <#--<script type="text/javascript" src="${static!}/source/lib/prism/js/code-wrap.js"></script>-->
     </head>
     <body class="is-3-column">
     <@navbar 'page' />

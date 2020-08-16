@@ -1,0 +1,11 @@
+/*
+ * @desc: code wrap automatically
+ * @author: Witt Zhang
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+}
